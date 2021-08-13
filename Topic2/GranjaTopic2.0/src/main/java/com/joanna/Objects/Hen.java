@@ -1,6 +1,7 @@
 package com.joanna.Objects;
 
 import com.joanna.Items.Color;
+import com.joanna.Patterns.EggBuilder;
 
 public class Hen {
     private Egg[] eggs;
@@ -19,8 +20,9 @@ public class Hen {
         return this.eggs;
     }
 
-
-
+    public void setColor(Color color) {
+        this.color = color;
+    }
 
     public Egg[] handEgg(){
         Egg[] handEggs= this.eggs; //Guardo el arreglo de los huevos de la gallina en una variable local
@@ -29,8 +31,10 @@ public class Hen {
     }
 
     public void layEggs(){
-        this.eggs[0]=new Egg(this.color);
-        this.eggs[1]=new Egg(this.color);
+        Egg egg1 = new EggBuilder().color(this.color).build();
+        Egg egg2 = new EggBuilder().color(this.color).build();
+        this.eggs[0]= egg1;
+        this.eggs[1]= egg2;
     }
 
 }

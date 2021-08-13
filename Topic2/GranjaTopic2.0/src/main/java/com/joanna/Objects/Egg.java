@@ -6,17 +6,17 @@ import com.joanna.Items.Color;
 public class Egg {
         private Color color;
 
-        public Egg(Color color){
-            this.color=color;
-        }
-
         public Egg(){ }
 
         public Color getColor(){
             return this.color;
         }
 
-        @Override
+        public void setColor(Color color) {
+            this.color = color;
+        }
+
+    @Override
         public String toString() {
 
             String eggStr;

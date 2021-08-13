@@ -1,17 +1,12 @@
 package com.joanna.Objects;
 
 import com.joanna.Items.Color;
-import org.apache.log4j.Logger;
-import org.apache.log4j.BasicConfigurator;
 
 public class Farmer{
     private EggsCarton[] eggsCartons;
     private static Farmer instance;
 
-
-
     private Farmer (){
-
         this.eggsCartons=new EggsCarton[3];
         this.initEggsCartons();
     }
@@ -25,8 +20,6 @@ public class Farmer{
 
 
     public void startFarming(Hen[] hens){
-
-
         int cont=0;
         for (Hen hen: hens) {
             Egg[] eggs= hen.handEgg();
@@ -57,8 +50,6 @@ public class Farmer{
     }
 
     public void showEggsCartons() {
-
-
         for (EggsCarton eggsCartons : this.getEggsCartons()) {
 
             System.out.println("================\n"); // print a separator of eggs carton.

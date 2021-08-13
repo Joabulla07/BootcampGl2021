@@ -1,7 +1,6 @@
 package com.joanna.Objects;
 
 import com.joanna.Items.Color;
-import org.apache.log4j.Logger;
 
 public class EggsCarton {
     private Egg[][] eggs;
@@ -9,7 +8,6 @@ public class EggsCarton {
     private boolean full;
     private Color color;
     private int[] freePlace = new int[2];
-
 
     public EggsCarton(Color color){
         this.eggCount =0;

@@ -24,9 +24,9 @@ public class HenHouse{
         for (int i = 0; i < 40; i++) {
 
             if (i < 12) { // decide what color of eggs lays the hen.
-                hens[i] = factoryHen.spawnhen("white");
+                hens[i] = factoryHen.factoryHen("white");
             } else {
-                hens[i] = factoryHen.spawnhen("red");
+                hens[i] = factoryHen.factoryHen("red");
             }
         }
         return hens;
