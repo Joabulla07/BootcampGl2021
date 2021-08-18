@@ -13,23 +13,14 @@ public class FarmerTest {
     Farmer farmer = Farmer.getInstance();
     EggsCarton[] eggsCartons = new EggsCarton[3];
 
-    @Test
-    public void startFarmingTest(){
-
-    }
 
     @Test
     public void getEggsCartonsTest(){
+        Assert.assertNotEquals(eggsCartons, farmer.getEggsCartons());
         this.eggsCartons[0] = new EggsCarton(Color.RED);
         this.eggsCartons[1] = new EggsCarton(Color.RED);
         this.eggsCartons[2] = new EggsCarton(Color.WHITE);
-        EggsCarton[] farmerCarton = farmer.getEggsCartons();
-        Assert.assertEquals(Arrays.toString(eggsCartons), Arrays.toString(farmerCarton));
-    }
-
-    @Test
-    public void initEggsCartonsTest(){
-
+        Assert.assertArrayEquals(eggsCartons, farmer.getEggsCartons());
     }
 
 }

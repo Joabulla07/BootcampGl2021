@@ -26,34 +26,32 @@ public class HenTest {
     public void getEggsColorTest(){
         Assert.assertEquals(Color.RED, redHen.getEggsColor());
         Assert.assertEquals(Color.WHITE, whiteHen.getEggsColor());
+        log.info("getEggsColorTest Passed");
     }
 
       @Test
     public void handEggTest(){
         redHen.layEggs();
-        Assert.assertEquals(Arrays.toString(eggsRed), Arrays.toString(redHen.handEgg()));
+        Assert.assertArrayEquals(eggsRed, redHen.handEgg());
 
         whiteHen.layEggs();
-        Assert.assertEquals(Arrays.toString(eggsWhite), Arrays.toString(whiteHen.handEgg()));
+        Assert.assertArrayEquals(eggsWhite, whiteHen.handEgg());
+          log.info("handEggTest Passed");
     }
 
     @Test
     public void getEggTest(){
         redHen.layEggs();
-        Assert.assertEquals(Arrays.toString(eggsRed), Arrays.toString(redHen.getEgg()));
-
+        Assert.assertArrayEquals(eggsRed, redHen.getEgg());
+        log.info("getEggTest Passed");
     }
 
     @Test
-    public void toString_() {
+    public void toStringTest() {
         Assert.assertEquals("egg colors: RED", redHen.toString());
         Assert.assertNotEquals("egg colors: WHITE", redHen.toString());
         Assert.assertNotNull(redHen.toString());
+        log.info("toStringTest Passed");
     }
 
-
-    @After
-    public void mensaje(){
-        log.info("Test Passed");
-    }
 }

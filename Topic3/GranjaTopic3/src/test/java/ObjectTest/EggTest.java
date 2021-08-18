@@ -24,4 +24,9 @@ public class EggTest {
         Assert.assertEquals("(O)", whiteEgg.toString());
         Assert.assertEquals("(G)", nullEgg.toString());
     }
+
+    @Test
+    public void equals(){
+        Assert.assertNotEquals(redEgg, whiteEgg);
+    }
 }

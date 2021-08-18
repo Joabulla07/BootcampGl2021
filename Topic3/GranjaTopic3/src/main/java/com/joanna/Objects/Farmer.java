@@ -72,4 +72,17 @@ public class Farmer{
                 "eggsCartons=" + Arrays.toString(eggsCartons) +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Farmer farmer = (Farmer) o;
+        return Arrays.equals(eggsCartons, farmer.eggsCartons);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(eggsCartons);
+    }
 }

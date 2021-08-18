@@ -2,6 +2,9 @@ package com.joanna.Objects;
 
 import com.joanna.Items.Color;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class EggsCarton {
     private Egg[][] eggs;
     private int eggCount;
@@ -64,5 +67,18 @@ public class EggsCarton {
         return "EggsCarton{" +
                 "color=" + color +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        EggsCarton that = (EggsCarton) o;
+        return color == that.color;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(color);
     }
 }

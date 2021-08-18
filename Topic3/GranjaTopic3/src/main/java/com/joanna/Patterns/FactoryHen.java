@@ -8,10 +8,10 @@ public class FactoryHen implements Factory{
 
     @Override
     public Hen factoryHen(Color color) {
-        switch (color) {
-            case WHITE: return new HenBuilder().color(Color.WHITE).build();
-            case RED: return new HenBuilder().color(Color.RED).build();
-            default: return null;
-        }
+        return switch (color) {
+            case WHITE -> new HenBuilder().color(Color.WHITE).build();
+            case RED -> new HenBuilder().color(Color.RED).build();
+            default -> throw new IllegalArgumentException("Color not found");
+        };
     }
 }
