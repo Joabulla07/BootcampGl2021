@@ -54,8 +54,15 @@ public class EggsCarton {
     private void fillEmptyEggs(){
         for (int i = 0; i <6 ; i++) {
             for (int j = 0; j <5 ; j++) {
-                this.eggs[j][i]=new Egg();
+                this.eggs[j][i]=new Egg(this.color);
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return "EggsCarton{" +
+                "color=" + color +
+                '}';
     }
 }

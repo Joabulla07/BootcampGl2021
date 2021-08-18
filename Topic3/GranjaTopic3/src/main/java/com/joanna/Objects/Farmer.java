@@ -2,6 +2,8 @@ package com.joanna.Objects;
 
 import com.joanna.Items.Color;
 
+import java.util.Arrays;
+
 public class Farmer{
     private EggsCarton[] eggsCartons;
     private static Farmer instance;
@@ -63,4 +65,11 @@ public class Farmer{
         }
     }
 
+
+    @Override
+    public String toString() {
+        return "Farmer{" +
+                "eggsCartons=" + Arrays.toString(eggsCartons) +
+                '}';
+    }
 }

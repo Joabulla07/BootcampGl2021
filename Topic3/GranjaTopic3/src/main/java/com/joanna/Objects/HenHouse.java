@@ -1,5 +1,6 @@
 package com.joanna.Objects;
 
+import com.joanna.Items.Color;
 import com.joanna.Patterns.FactoryHen;
 
 public class HenHouse{
@@ -24,9 +25,9 @@ public class HenHouse{
         for (int i = 0; i < 40; i++) {
 
             if (i < 12) { // decide what color of eggs lays the hen.
-                hens[i] = factoryHen.factoryHen("white");
+                hens[i] = factoryHen.factoryHen(Color.WHITE);
             } else {
-                hens[i] = factoryHen.factoryHen("red");
+                hens[i] = factoryHen.factoryHen(Color.RED);
             }
         }
         return hens;

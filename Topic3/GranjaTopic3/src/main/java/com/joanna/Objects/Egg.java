@@ -6,7 +6,9 @@ import com.joanna.Items.Color;
 public class Egg {
         private Color color;
 
-        public Egg(){ }
+        public Egg(Color color){
+            this.color = color;
+        }
 
         public Color getColor(){
             return this.color;
@@ -29,5 +31,6 @@ public class Egg {
             }
             return eggStr;
         }
+
     }
 

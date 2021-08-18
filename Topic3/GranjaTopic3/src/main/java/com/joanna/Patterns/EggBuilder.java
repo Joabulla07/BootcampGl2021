@@ -14,8 +14,7 @@ public class EggBuilder implements EBuilder{
 
     @Override
     public Egg build() {
-        Egg egg = new Egg();
-        egg.setColor(this.color);
+        Egg egg = new Egg(this.color);
         return egg;
     }
 }

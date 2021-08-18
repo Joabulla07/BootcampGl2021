@@ -14,7 +14,6 @@ public class HenBuilder implements HBuilder{
     @Override
     public Hen build() {
         Hen hen = new Hen(this.color);
-        hen.setColor(this.color);
         return hen;
     }
 }
