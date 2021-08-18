@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;
 
+
 public class FactoryHenTest {
 
     private final static Logger log = Logger.getLogger(FactoryHenTest.class);

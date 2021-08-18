@@ -5,10 +5,9 @@ import com.joanna.Items.Color;
 import com.joanna.Objects.Egg;
 import com.joanna.Objects.Hen;
 import org.apache.log4j.Logger;
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
-import java.util.Arrays;
+
 
 public class HenTest {
     private final static Logger log = Logger.getLogger(HenTest.class);
@@ -42,7 +41,7 @@ public class HenTest {
     @Test
     public void getEggTest(){
         redHen.layEggs();
-        Assert.assertArrayEquals(eggsRed, redHen.getEgg());
+        Assert.assertArrayEquals(eggsRed, redHen.getEggs());
         log.info("getEggTest Passed");
     }
 

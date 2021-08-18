@@ -4,18 +4,14 @@ import PatternsTest.FactoryHenTest;
 import com.joanna.Items.Color;
 import com.joanna.Objects.EggsCarton;
 import com.joanna.Objects.Farmer;
-import com.joanna.Objects.Hen;
-import com.joanna.Objects.HenHouse;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.Arrays;
 
 public class FarmerTest {
     private final static Logger log = Logger.getLogger(FactoryHenTest.class);
     Farmer farmer = Farmer.getInstance();
-    HenHouse henHouse = HenHouse.getInstance();
     EggsCarton[] eggsCartons = new EggsCarton[3];
 
 

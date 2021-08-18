@@ -1,9 +1,11 @@
 package com.joanna.Objects;
 
 import com.joanna.Items.Color;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
 
-import java.util.Arrays;
-
+@Getter
+@EqualsAndHashCode
 public class Farmer{
     private EggsCarton[] eggsCartons;
     private static Farmer instance;
@@ -41,9 +43,6 @@ public class Farmer{
         }
     }
 
-    public EggsCarton[] getEggsCartons( ){
-        return this.eggsCartons;
-    }
 
     private void initEggsCartons(){
         this.eggsCartons[0]=new EggsCarton(Color.RED);
@@ -63,26 +62,5 @@ public class Farmer{
             }
 
         }
-    }
-
-
-    @Override
-    public String toString() {
-        return "Farmer{" +
-                "eggsCartons=" + Arrays.toString(eggsCartons) +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Farmer farmer = (Farmer) o;
-        return Arrays.equals(eggsCartons, farmer.eggsCartons);
-    }
-
-    @Override
-    public int hashCode() {
-        return Arrays.hashCode(eggsCartons);
     }
 }

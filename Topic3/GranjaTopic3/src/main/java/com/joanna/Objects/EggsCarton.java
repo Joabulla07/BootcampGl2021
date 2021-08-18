@@ -1,16 +1,22 @@
 package com.joanna.Objects;
 
 import com.joanna.Items.Color;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
 import java.util.Arrays;
 import java.util.Objects;
 
+@EqualsAndHashCode
+@ToString
+@Getter
 public class EggsCarton {
-    private Egg[][] eggs;
-    private int eggCount;
-    private boolean full;
+    @ToString.Exclude private Egg[][] eggs;
+    @EqualsAndHashCode.Exclude @ToString.Exclude private int eggCount;
+    @EqualsAndHashCode.Exclude private boolean full;
     private Color color;
-    private int[] freePlace = new int[2];
+    @EqualsAndHashCode.Exclude @ToString.Exclude private int[] freePlace = new int[2];
 
     public EggsCarton(Color color){
         this.eggCount =0;
@@ -22,21 +28,10 @@ public class EggsCarton {
         this.fillEmptyEggs();
     }
 
-    public Egg[][] getEggs(){
-        return this.eggs;
-    }
-
     public boolean isFull(){
         return this.full;
     }
 
-    public int getEggCount() {
-        return eggCount;
-    }
-
-    public void setEggCount(int eggCount) {
-        this.eggCount = eggCount;
-    }
 
     public void addEgg(Egg egg){
         if(egg.getColor() == this.color){
@@ -65,32 +60,9 @@ public class EggsCarton {
     private void fillEmptyEggs(){
         for (int i = 0; i <6 ; i++) {
             for (int j = 0; j <5 ; j++) {
-                this.eggs[j][i]=new Egg(this.color);
+                this.eggs[j][i]=new Egg();
             }
         }
     }
 
-    public Color getColor() {
-        return color;
-    }
-
-    @Override
-    public String toString() {
-        return "EggsCarton{" +
-                "color=" + color +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        EggsCarton that = (EggsCarton) o;
-        return color == that.color;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(color);
-    }
 }

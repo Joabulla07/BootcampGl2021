@@ -8,6 +8,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class EggTest {
+
     private final static Logger log = Logger.getLogger(FactoryHenTest.class);
     Egg redEgg = new Egg(Color.RED);
     Egg whiteEgg = new Egg(Color.WHITE);
