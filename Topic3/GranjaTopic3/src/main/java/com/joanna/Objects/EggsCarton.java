@@ -30,6 +30,14 @@ public class EggsCarton {
         return this.full;
     }
 
+    public int getEggCount() {
+        return eggCount;
+    }
+
+    public void setEggCount(int eggCount) {
+        this.eggCount = eggCount;
+    }
+
     public void addEgg(Egg egg){
         if(egg.getColor() == this.color){
             this.eggs[this.freePlace[0]][this.freePlace[1]]=egg;
@@ -60,6 +68,10 @@ public class EggsCarton {
                 this.eggs[j][i]=new Egg(this.color);
             }
         }
+    }
+
+    public Color getColor() {
+        return color;
     }
 
     @Override

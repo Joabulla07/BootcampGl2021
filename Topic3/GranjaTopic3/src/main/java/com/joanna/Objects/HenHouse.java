@@ -4,7 +4,10 @@ import com.joanna.Items.Color;
 import com.joanna.Patterns.FactoryHen;
 
 public class HenHouse{
-    private Hen[] hens = new Hen[40];
+    private int henCount = 40;
+    private int henRedCount = 28;
+    private int henWhiteCount = 12;
+    private Hen[] hens = new Hen[henCount];
     private static HenHouse instance;
 
     private HenHouse(){
@@ -24,7 +27,7 @@ public class HenHouse{
     public Hen[] initHenHouse() {
         for (int i = 0; i < 40; i++) {
 
-            if (i < 12) { // decide what color of eggs lays the hen.
+            if (i < henWhiteCount) { // decide what color of eggs lays the hen.
                 hens[i] = factoryHen.factoryHen(Color.WHITE);
             } else {
                 hens[i] = factoryHen.factoryHen(Color.RED);
@@ -35,5 +38,17 @@ public class HenHouse{
 
     public Hen[] getHens() {
         return hens;
+    }
+
+    public int getHenCount() {
+        return henCount;
+    }
+
+    public int getHenRedCount() {
+        return henRedCount;
+    }
+
+    public int getHenWhiteCount() {
+        return henWhiteCount;
     }
 }
