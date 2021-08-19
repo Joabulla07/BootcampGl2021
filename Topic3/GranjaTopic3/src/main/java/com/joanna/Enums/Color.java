@@ -1,4 +1,4 @@
-package com.joanna.Items;
+package com.joanna.Enums;
 
 public enum Color {
     RED,

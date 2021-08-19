@@ -1,6 +1,6 @@
-package com.joanna.Objects;
+package com.joanna.Model;
 
-import com.joanna.Items.Color;
+import com.joanna.Enums.Color;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 

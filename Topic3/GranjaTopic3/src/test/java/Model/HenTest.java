@@ -1,9 +1,9 @@
-package ObjectTest;
+package Model;
 
 
-import com.joanna.Items.Color;
-import com.joanna.Objects.Egg;
-import com.joanna.Objects.Hen;
+import com.joanna.Enums.Color;
+import com.joanna.Model.Egg;
+import com.joanna.Model.Hen;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;

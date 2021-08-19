@@ -1,8 +1,9 @@
-package PatternsTest;
+package Model.BuilderPattern;
 
-import com.joanna.Items.Color;
-import com.joanna.Objects.Hen;
-import com.joanna.Patterns.HenBuilder;
+import Model.FactoryPattern.FactoryHenTest;
+import com.joanna.Enums.Color;
+import com.joanna.Model.Hen;
+import com.joanna.Model.BuilderPattern.HenBuilder;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;

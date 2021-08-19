@@ -1,9 +1,10 @@
-package com.joanna.Patterns;
+package com.joanna.Model.BuilderPattern;
 
-import com.joanna.Items.Color;
-import com.joanna.Objects.Hen;
+import com.joanna.Enums.Color;
+import com.joanna.Interfaces.HBuilder;
+import com.joanna.Model.Hen;
 
-public class HenBuilder implements HBuilder{
+public class HenBuilder implements HBuilder {
     private Color color;
 
     public HenBuilder color(Color color){

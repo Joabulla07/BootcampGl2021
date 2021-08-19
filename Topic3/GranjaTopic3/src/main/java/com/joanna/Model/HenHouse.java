@@ -1,7 +1,7 @@
-package com.joanna.Objects;
+package com.joanna.Model;
 
-import com.joanna.Items.Color;
-import com.joanna.Patterns.FactoryHen;
+import com.joanna.Enums.Color;
+import com.joanna.Model.FactoryPattern.FactoryHen;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,12 +13,11 @@ public class HenHouse{
     private int henWhiteCount = 12;
     private Hen[] hens = new Hen[40];
     private static HenHouse instance;
+    FactoryHen factoryHen = new FactoryHen();
 
     private HenHouse(){
         initHenHouse();
     }
-
-    FactoryHen factoryHen = new FactoryHen();
 
     public static HenHouse getInstance(){
         if(instance == null){
@@ -38,5 +37,4 @@ public class HenHouse{
         }
         return hens;
     }
-
 }

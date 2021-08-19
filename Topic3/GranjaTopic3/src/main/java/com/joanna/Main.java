@@ -1,6 +1,6 @@
 package com.joanna;
 
-import com.joanna.Objects.*;
+import com.joanna.Model.*;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 

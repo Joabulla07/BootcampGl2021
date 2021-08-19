@@ -1,9 +1,7 @@
-package ObjectTest;
+package Model;
 
-import PatternsTest.FactoryHenTest;
-import com.joanna.Objects.Hen;
-import com.joanna.Objects.HenHouse;
-import com.joanna.Patterns.FactoryHen;
+import Model.FactoryPattern.FactoryHenTest;
+import com.joanna.Model.HenHouse;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;

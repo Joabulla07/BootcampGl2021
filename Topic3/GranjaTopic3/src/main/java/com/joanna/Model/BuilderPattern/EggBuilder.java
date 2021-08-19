@@ -1,9 +1,10 @@
-package com.joanna.Patterns;
+package com.joanna.Model.BuilderPattern;
 
-import com.joanna.Items.Color;
-import com.joanna.Objects.Egg;
+import com.joanna.Enums.Color;
+import com.joanna.Interfaces.EBuilder;
+import com.joanna.Model.Egg;
 
-public class EggBuilder implements EBuilder{
+public class EggBuilder implements EBuilder {
     private Color color;
 
     public EggBuilder color(Color color){

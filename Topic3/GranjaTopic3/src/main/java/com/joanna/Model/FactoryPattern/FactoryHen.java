@@ -1,10 +1,12 @@
-package com.joanna.Patterns;
+package com.joanna.Model.FactoryPattern;
 
-import com.joanna.Items.Color;
-import com.joanna.Objects.Hen;
+import com.joanna.Enums.Color;
+import com.joanna.Interfaces.Factory;
+import com.joanna.Model.Hen;
+import com.joanna.Model.BuilderPattern.HenBuilder;
 
 
-public class FactoryHen implements Factory{
+public class FactoryHen implements Factory {
 
     @Override
     public Hen factoryHen(Color color) {

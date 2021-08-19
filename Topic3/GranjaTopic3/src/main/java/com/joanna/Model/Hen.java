@@ -1,7 +1,7 @@
-package com.joanna.Objects;
+package com.joanna.Model;
 
-import com.joanna.Items.Color;
-import com.joanna.Patterns.EggBuilder;
+import com.joanna.Enums.Color;
+import com.joanna.Model.BuilderPattern.EggBuilder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

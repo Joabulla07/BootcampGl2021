@@ -1,4 +1,4 @@
-package com.joanna.Objects;
+package com.joanna.Model;
 
 public class Farm {
         private  static Farm instance;
