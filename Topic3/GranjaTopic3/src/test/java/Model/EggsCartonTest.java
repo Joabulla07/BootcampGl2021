@@ -7,6 +7,9 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
 public class EggsCartonTest {
     private final static Logger log = Logger.getLogger(EggsCartonTest.class);
     EggsCarton eggsCarton = new EggsCarton(Color.RED);
@@ -15,14 +18,21 @@ public class EggsCartonTest {
 
     @Test
     public void isFullTest() {
-        Assert.assertEquals(false, eggsCarton.isFull());
+        Assert.assertFalse(eggsCarton.isFull());
         log.info("isFullTest Passed");
     }
 
     @Test
     public void getColorTest() {
-        Assert.assertEquals(Color.RED, eggsCarton.getColor());
-        Assert.assertNotEquals(Color.WHITE, eggsCarton.getColor());
+        EggsCarton redEgg1 = mock(EggsCarton.class);
+        when(redEgg1.getColor()).thenReturn(Color.RED);
+
+        EggsCarton whiteEgg1 = mock(EggsCarton.class);
+        when(whiteEgg1.getColor()).thenReturn(Color.WHITE);
+
+
+        Assert.assertEquals(redEgg1.getColor(), eggsCarton.getColor());
+        Assert.assertNotEquals(whiteEgg1.getColor(), eggsCarton.getColor());
         Assert.assertNotNull(eggsCarton.getColor());
         log.info("getColorTest Passed");
     }

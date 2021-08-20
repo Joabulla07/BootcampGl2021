@@ -7,6 +7,9 @@ import com.joanna.Model.BuilderPattern.HenBuilder;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;
+import org.mockito.Mockito;
+
+import static org.mockito.Mockito.*;
 
 public class HenBuilderTest {
     private final static Logger log = Logger.getLogger(FactoryHenTest.class);
@@ -15,7 +18,9 @@ public class HenBuilderTest {
 
     @Test
     public void buildTest(){
-        Assert.assertEquals(redHen, henBuild.color(Color.RED).build());
+        Hen returnHen = henBuild.color(Color.RED).build();
+
+        Assert.assertEquals(redHen, returnHen);
         log.info("buildTest Passed");
     }
 }

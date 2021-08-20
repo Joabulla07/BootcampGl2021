@@ -7,6 +7,7 @@ import com.joanna.Model.Hen;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 
 public class HenTest {
@@ -23,8 +24,14 @@ public class HenTest {
 
     @Test
     public void getEggsColorTest(){
-        Assert.assertEquals(Color.RED, redHen.getEggsColor());
-        Assert.assertEquals(Color.WHITE, whiteHen.getEggsColor());
+        Hen redHen1 = Mockito.mock(Hen.class);
+        Mockito.when(redHen1.getEggsColor()).thenReturn(Color.RED);
+
+        Hen whiteHen1 = Mockito.mock(Hen.class);
+        Mockito.when(whiteHen1.getEggsColor()).thenReturn(Color.WHITE);
+
+        Assert.assertEquals(redHen1.getEggsColor(), redHen.getEggsColor());
+        Assert.assertEquals(whiteHen1.getEggsColor(), whiteHen.getEggsColor());
         log.info("getEggsColorTest Passed");
     }
 
