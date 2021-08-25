@@ -19,6 +19,7 @@
       <configuration>
         <fileset id="fileset" name="ApplicationContext" removed="false">
           <file>file://$MODULE_DIR$/src/main/java/com/joanna/config/applicationContext.xml</file>
+          <file>file://$MODULE_DIR$/web/WEB-INF/spring_mvc_servlet.xml</file>
         </fileset>
       </configuration>
     </facet>
