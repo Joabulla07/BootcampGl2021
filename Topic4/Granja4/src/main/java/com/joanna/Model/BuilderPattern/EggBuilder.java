@@ -1,6 +1,7 @@
 package com.joanna.Model.BuilderPattern;
-import com.joanna.Interfaces.EBuilder;
+
 import com.joanna.Model.Egg;
+import com.joanna.interfacess.EBuilder;
 import org.springframework.stereotype.Component;
 
 

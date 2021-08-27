@@ -1,11 +1,11 @@
 package com.joanna.Model;
 
-import com.joanna.constants.Color;
+import com.joanna.constant.Color;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
 import org.springframework.stereotype.Component;
 
-@Getter
+
+
 @EqualsAndHashCode
 @Component("Farmer")
 public class Farmer {
@@ -16,6 +16,10 @@ public class Farmer {
         this.initEggsCartons();
     }
 
+
+    public EggsCarton[] getEggsCartons() {
+        return eggsCartons;
+    }
 
     public void startFarming(Hen[] hens){
 

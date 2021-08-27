@@ -1,7 +1,9 @@
 package com.joanna.farm.service;
 
 import com.joanna.farm.models.User;
+import org.springframework.stereotype.Service;
 
+@Service
 public interface UserService  {
 
     User addUser(User user);

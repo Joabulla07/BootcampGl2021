@@ -1,9 +1,9 @@
 package com.joanna.Model;
 
-
-import com.joanna.constants.Color;
+import com.joanna.constant.Color;
 import lombok.*;
 import org.springframework.stereotype.Component;
+
 
 
 @Setter

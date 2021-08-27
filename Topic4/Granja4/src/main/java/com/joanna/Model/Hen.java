@@ -1,5 +1,6 @@
 package com.joanna.Model;
 
+
 import com.joanna.Model.BuilderPattern.EggBuilder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

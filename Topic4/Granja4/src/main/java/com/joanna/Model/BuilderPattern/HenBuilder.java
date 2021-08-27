@@ -1,8 +1,8 @@
 package com.joanna.Model.BuilderPattern;
 
 
-import com.joanna.Interfaces.BuilderH;
 import com.joanna.Model.Hen;
+import com.joanna.interfacess.BuilderH;
 import org.springframework.stereotype.Component;
 
 @Component("HenBuilder")

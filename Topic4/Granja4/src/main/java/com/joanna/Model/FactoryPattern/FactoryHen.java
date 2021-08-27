@@ -1,11 +1,12 @@
 package com.joanna.Model.FactoryPattern;
 
-import com.joanna.Interfaces.HFactory;
+import com.joanna.interfacess.HFactory;
 import com.joanna.Model.BuilderPattern.HenBuilder;
 import com.joanna.Model.Hen;
-import com.joanna.constants.Color;
+import com.joanna.constant.Color;
 import lombok.Getter;
 import org.springframework.stereotype.Component;
+
 
 @Getter
 @Component("FactoryHen")
