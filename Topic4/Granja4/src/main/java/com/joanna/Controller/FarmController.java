@@ -3,9 +3,7 @@ package com.joanna.Controller;
 
 import com.joanna.Model.Farmer;
 import com.joanna.Model.HenHouse;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -20,19 +18,8 @@ public class FarmController {
 
     @RequestMapping("/hello")
     //read the provided form data
-    public ModelAndView display(@RequestParam("name") String name,@RequestParam("pass") String pass,Model model){
-        ModelAndView viewPage = new ModelAndView("viewpage");
-        ModelAndView pageDeError = new ModelAndView("pageDeError");
-        if(pass.equals("admin")) {
-
-            model.addAttribute("message", name);
-            return viewPage;
-        }
-        else
-        {
-            model.addAttribute("message", name);
-            return pageDeError;
-        }
+    public ModelAndView display(){
+        return new ModelAndView("farm");
     }
 
     @RequestMapping("/cartons")

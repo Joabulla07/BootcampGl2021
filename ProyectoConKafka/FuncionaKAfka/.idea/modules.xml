@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/FuncionaKAfka.iml" filepath="$PROJECT_DIR$/.idea/FuncionaKAfka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Probando2.9.13.54/Probando2.9.13.54.iml" filepath="$PROJECT_DIR$/Probando2.9.13.54/Probando2.9.13.54.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kafkaSpringboot/kafkaSoloProbandoDeInternet.iml" filepath="$PROJECT_DIR$/kafkaSpringboot/kafkaSoloProbandoDeInternet.iml" />
+    </modules>
+  </component>
+</project>

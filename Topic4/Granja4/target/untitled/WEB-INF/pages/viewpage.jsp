@@ -8,6 +8,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <body>
-  Welcome ${message}
+  <h1>Welcome ${message}</h1>
 </body>
 </html>
